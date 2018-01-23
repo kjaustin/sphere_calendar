@@ -1,0 +1,54 @@
+<html lang="en-US" class="no-touch">
+    <head>
+		<title>Sphere - Simplifying Life</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Sphere simplifies your life through automation.">
+        <meta charset="utf-8"><script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/f57c18af49.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0001">
+		<link href="style/screen.css" rel="stylesheet" type="text/css" media="screen">
+	</head>
+	<body>
+		<header class="nav-height">
+			<h1 id="logo">Sphere</h1>
+			<nav id="top">
+				<label for="show-menu" class="show-menu">Show menu</label>
+				<input type="checkbox" id="show-menu" value="button">
+				<ul id="menu">
+					<li><a href="index.html">Calendar</a></li>
+					<li><a href="friends.html">Friends</a></li>
+					<li><a href="interests.html">Interests</a></li>
+					<li class="show-menu2"><a href="#">Link only when DD menu</a></li>
+				</ul>
+			</nav>
+		</header>
+        <!--Find Friend-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="friend-left-container">
+            <div id="user-image"></div>
+            <h5 style="color: #a58ea8">Skills</h5>
+            <ul id="skill-list">
+            </ul>
+        </div>
+        <div class="friend-right-container">
+            <h4 id="profile-header"></h4>
+            <h5 id="profile-title" style="color: #a58ea8"></h5>
+
+            <button class="profile-message-button"><i class="fa fa-comments" aria-hidden="true"></i> Send Message</button>
+            <button class="profile-friends-button"><i class="fa fa-users" aria-hidden="true"></i> Friends</button>
+
+            <h3 id="about-header"><i class="fa fa-user" aria-hidden="true"></i> About</h3>
+            <h5 style="color: #a58ea8">Contact Information</h5>
+            <p class="contact-information">Phone: </p><p id="user-phone"></p>
+            <p class="contact-information">Address: </p><p id="user-address"></p>
+            <p class="contact-information">Email: </p><p id="user-email"></p>
+            <p class="contact-information">Site: </p><p id="user-site"></p>
+            <p class="contact-information">Birthday: </p><p id="user-birthday"></p>
+        </div>
+	</body>
+</html>

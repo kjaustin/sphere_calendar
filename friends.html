@@ -1,0 +1,65 @@
+<html lang="en-US" class="no-touch">
+    <head>
+		<title>Sphere - Simplifying Life</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Sphere simplifies your life through automation.">
+        <meta charset="utf-8"><script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/f57c18af49.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0001">
+		<link href="style/screen.css" rel="stylesheet" type="text/css" media="screen">
+	</head>
+	<body>
+		<header class="nav-height">
+			<h1 id="logo">Sphere</h1>
+			<nav id="top">
+				<label for="show-menu" class="show-menu">Show menu</label>
+				<input type="checkbox" id="show-menu" value="button">
+				<ul id="menu">
+					<li><a href="index.html">Calendar</a></li>
+					<li><a href="friends.html">Friends</a></li>
+					<li><a href="interests.html">Interests</a></li>
+					<li class="show-menu2"><a href="#">Link only when DD menu</a></li>
+				</ul>
+			</nav>
+		</header>
+        <!--Find Friend-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="friend-search-container">
+            <label>Find A Friend: </label>
+            <input id="friend-search-input"></input><button id="search-friend"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+        <div class="grid-container friends-header sticky">
+            <h3>My Friends</h3>
+        </div>
+        <div class="grid-container"  id="friends-body">
+
+            <!--X with each friend row to delete friend-->
+        </div>
+        <script>
+            var users = [
+                { id: 1, img: "style/images/1.jpg", name: "Maya Smith", title: "Manager", skills: ["Bilingual","Planning","Organizing","Coordinating","Directing"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "01/12/1990"},
+                { id: 2, img: "style/images/2.jpg", name: "Bob Ferroro", title: "Business Intelligence", skills: ["Assertiveness","Collaboration","Communication","Analytical Ability","Accuracy"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "05/21/1985"},
+                { id: 3, img: "style/images/3.jpg", name: "Hannah Wanton", title: "Database Developer", skills: ["Development","Discipline","Empathy","Innovation","Goal-oriented"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "06/30/1986"},
+                { id: 4, img: "style/images/4.jpg", name: "Toby Rock", title: "Logistics", skills: ["Genuine","Networking","Patience","Problem Solving","Professional"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "09/02/1993"},
+                { id: 5, img: "style/images/5.jpg", name: "Lauren Mines", title: "Web Developer", skills: ["Persuasion","Microsoft Office","Listening","Punctuality","Sales"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "08/05/1989"},
+                { id: 6, img: "style/images/6.jpg", name: "Sarah Johnson", title: "Product Designer", skills: ["Tactfulness","Scheduling","Strategic Thinking","Time Management","Teamwork"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "10/11/1978"},
+                { id: 7, img: "style/images/7.jpg", name: "Jessica Renee", title: "Retail", skills: ["Writing","Networking","Patience","Interpersonal","Focused"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "11/23/1995"}
+            ];
+
+            for(var i = 0; i < users.length; i++) {
+                document.getElementById( 'friends-body' ).innerHTML +=
+                "<div class='grid-item' data-id=" + users[i].id + "><i class='fa fa-window-close' aria-hidden='true'></i><image class='friendImage' src=" + users[i].img + " /><h4>" + users[i].name + "</h4></div>";
+            };
+
+            $("#search-friend").on("click", function() {
+                console.log("Searched a friend");
+            });
+
+        </script>
+	</body>
+</html>
