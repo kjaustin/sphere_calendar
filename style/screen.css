@@ -33,9 +33,13 @@
 	.y-axis {
 		left: 7%;
 	}
-	.two, .three, .four {
+	.two, .three {
 		width: 47%;
-	} /* .four 30%? */
+	}
+
+	.four {
+		width: 30%;
+	}
 }
 
 @media (max-width: 960px) {
@@ -221,6 +225,7 @@ span {
 	color: #448;
 	border-bottom: #448 1px solid;
 }
+
 .show-menu {
 	font-size: 0;
     position: fixed;
@@ -408,10 +413,6 @@ span {
 	font-size: 1.5em;
 }
 
-.close {
-	margin-right: 7px;
-}
-
 @media (max-width: 960px) { 
 	.modal {
 		background-color: #f2f2f2;
@@ -470,7 +471,7 @@ span {
 	}
 
 	#page-wrap, .modal {
-	transition: all 0.1s ease; /* prefix me */
+	transition: all 0.3s ease; /* prefix me */
 	}
 	.dialogIsOpen #page-wrap {
 		/* Blur and de-color */
@@ -483,6 +484,7 @@ span {
 
 /* The Close Button */
 .close {
+	margin-right: 7px;
     color: #aaa;
     float: right;
     font-size: 28px;

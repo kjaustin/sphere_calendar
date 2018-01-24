@@ -88,6 +88,11 @@
             $('#user-email').html(users[n].email);
             $('#user-site').html(users[n].site);
             $('#user-birthday').html(users[n].birthday);
+
+            for (var i = 0; i < users[n].skills.length; i++) {
+                document.getElementById( 'skill-list' ).innerHTML +=
+                "<li>" + users[n].skills[i] + "</li>";
+            }
         });
     </script>
 </html>

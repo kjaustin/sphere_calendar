@@ -221,10 +221,9 @@ $(function() {
                 modal[0].style.display = "block";
                 $("body").toggleClass("dialogIsOpen");
             }
-				setInfoText(
-						'Changed checkbox ' + $(this).attr('id')+ ' to ' + checked + ' programmatically');
+			setInfoText(
+				'Changed checkbox ' + $(this).attr('id')+ ' to ' + checked + ' programmatically');
 		}
-
 });
 
 // If you also want to handle the user clicking on a
