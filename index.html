@@ -10,6 +10,7 @@
 		<link href="style/screen.css" rel="stylesheet" type="text/css" media="screen">
 	</head>
 	<body>
+        <div id="page-wrap">
 		<header class="nav-height">
 			<h1 id="logo" class="vertical-align">Sphere</h1>
 			<nav id="top" class="vertical-align">
@@ -1099,18 +1100,25 @@
 			<div class="padding"></div>
 			</div>
 		</div>
+        </div>
         <div id="calendarModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <header class="container"> 
-                    <h2>Add Calendar Event</h2>
-                </header>
-                <div class="container">
-                    <p>Date Start</p>
-                    <input />
-                    <p>Date End</p>
-                    <input />
-                </div>
+            <span class="close">&times;</span>
+            <h2 id="modal-header">Add Calendar Event</h2>
+            <div id="modal-div">
+                <form>
+                    <label class="modal-label" for="ename">Event Name</label>
+                    <input type="text" id="ename" name="ename" placeholder="Yoga" >
+                    <label class="modal-label" for="dstart">Start Date</label>
+                    <input type="text" id="dstart" name="dstart" placeholder="01/01/2018" >
+                    <label class="modal-label" for="tstart">Start Time</label>
+                    <input type="text" id="tstart" name="tstart" placeholder="630am" >
+                    <label class="modal-label" for="dend">End Date (optional)</label>
+                    <input type="text" id="dend" name="dend" placeholder="01/01/2018" >
+                    <label class="modal-label" for="tend">End Time (optional)</label>
+                    <input type="text" id="tend" name="tend" placeholder="830am" >
+
+                    <input id="modal-mobile-submit" type="submit" value="Submit" >
+                 </form>
             </div>
         </div>
     </body>

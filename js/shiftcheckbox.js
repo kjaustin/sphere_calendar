@@ -214,6 +214,13 @@ $(function() {
 		// plugin changes the state of a checkbox.
 
 		onChange : function(checked) {
+            var modal = $('.modal');
+            if (checked === false) {
+                modal[0].style.display = "none";
+            } else {
+                modal[0].style.display = "block";
+                $("body").toggleClass("dialogIsOpen");
+            }
 				setInfoText(
 						'Changed checkbox ' + $(this).attr('id')+ ' to ' + checked + ' programmatically');
 		}

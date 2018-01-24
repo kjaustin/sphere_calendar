@@ -37,8 +37,6 @@
             <h3>My Friends</h3>
         </div>
         <div class="grid-container"  id="friends-body">
-
-            <!--X with each friend row to delete friend-->
         </div>
         <script>
             var users = [
@@ -53,7 +51,7 @@
 
             for(var i = 0; i < users.length; i++) {
                 document.getElementById( 'friends-body' ).innerHTML +=
-                "<div class='grid-item' data-id=" + users[i].id + "><i class='fa fa-window-close' aria-hidden='true'></i><image class='friendImage' src=" + users[i].img + " /><h4>" + users[i].name + "</h4></div>";
+                "<div class='grid-item' data-id=" + users[i].id + "><span class='close'>&times;</span><image class='friendImage' src=" + users[i].img + " /><h4>" + users[i].name + "</h4></div>";
             };
 
             $("#search-friend").on("click", function() {

@@ -10,35 +10,32 @@ $( document ).ready(function() {
         { id: 7, img: "style/images/7.jpg", name: "Jessica Renee", title: "Retail", skills: ["Writing","Networking","Patience","Interpersonal","Focused"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "11/23/1995"}
     ];
 
-    var modal = $('.modal');
     var userId;
+    var modal = $('.modal');
+    var body = $('body');
 
-    $(".checkbox").on("click", function() {
-        console.log("You clicked on a cell");
-        console.log(modal.style);
+    // $(".checkbox").on("click", function() {
+    //     modal[0].style.display = "block";
+    //     $("body").toggleClass("dialogIsOpen");
+    // });
+
+    $(".close").on("click", function() {
+        modal[0].style.display = "none";
+        $("body").toggleClass("dialogIsOpen");
     });
 
     $(".grid-item").on("click", function() {
         userId = $(this).data("id");
+        window.location.href = "profile.html?userId=" + userId;
+    });
 
-        console.log(userId);
-        console.log(userId - 1);
-
-        document.location= "profile.html";
-        
-        $(function() {
-            console.log(users[userId - 1].img);
-            $('#profile-header').html(users[userId - 1].name);
-            // $('#profile-title').html(users[userId - 1].title);
-            // $('#user-phone').html(users[userId - 1].phone);
-            // $('#user-address').html(users[userId - 1].address);
-            // $('#user-email').html(users[userId - 1].email);
-            // $('#user-site').html(users[userId - 1].site);
-            // $('#user-birthday').html(users[userId - 1].birthday);
-            // for(var j = 0; j < users[userId - 1].skills.length; j++) {
-            //     document.getElementById( 'skill-list' ).innerHTML +=
-            //     "<li class='skill-item'>" + users[userId - 1].skills[j] + "</li>";
-            // };
-        });
+    $("#modal-mobile-submit").on("click", function() {
+        console.log("Submitted Event");
+        var ename = $("#ename").val();
+        var dstart = $("#dstart").val();
+        var tstart = $("#tstart").val();
+        var dend = $("#dend").val();
+        var tend = $("#tend").val();
+        console.log(ename + "," + dstart + "," + tstart + "," + dend + "," + tend);
     });
 });

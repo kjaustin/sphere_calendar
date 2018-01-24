@@ -51,4 +51,43 @@
             <p class="contact-information">Birthday: </p><p id="user-birthday"></p>
         </div>
 	</body>
+    <script>
+        $( document ).ready(function() {
+            var users = [
+                { id: 1, img: "style/images/1.jpg", name: "Maya Smith", title: "Manager", skills: ["Bilingual","Planning","Organizing","Coordinating","Directing"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "01/12/1990"},
+                { id: 2, img: "style/images/2.jpg", name: "Bob Ferroro", title: "Business Intelligence", skills: ["Assertiveness","Collaboration","Communication","Analytical Ability","Accuracy"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "05/21/1985"},
+                { id: 3, img: "style/images/3.jpg", name: "Hannah Wanton", title: "Database Developer", skills: ["Development","Discipline","Empathy","Innovation","Goal-oriented"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "06/30/1986"},
+                { id: 4, img: "style/images/4.jpg", name: "Toby Rock", title: "Logistics", skills: ["Genuine","Networking","Patience","Problem Solving","Professional"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "09/02/1993"},
+                { id: 5, img: "style/images/5.jpg", name: "Lauren Mines", title: "Web Developer", skills: ["Persuasion","Microsoft Office","Listening","Punctuality","Sales"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "08/05/1989"},
+                { id: 6, img: "style/images/6.jpg", name: "Sarah Johnson", title: "Product Designer", skills: ["Tactfulness","Scheduling","Strategic Thinking","Time Management","Teamwork"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "10/11/1978"},
+                { id: 7, img: "style/images/7.jpg", name: "Jessica Renee", title: "Retail", skills: ["Writing","Networking","Patience","Interpersonal","Focused"], phone: "123-456-7891", address: "111 somewhere street, California", email: "email@example.com", site: "demosite.com", birthday: "11/23/1995"}
+            ];
+
+            var parseQueryString = function(url) {
+                var urlParams = {};
+                url.replace(
+                    new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+                    function($0, $1, $2, $3) {
+                    urlParams[$1] = $3;
+                    }
+                );
+                return urlParams;
+            }
+
+            var urlToParse = location.search;  
+            var result = parseQueryString(urlToParse );  
+            console.info(JSON.stringify(result));
+
+            var n = Number(result.userId) - 1;
+
+            $('#user-image').html("<img class='profileImage' src=" + users[n].img + " >");
+            $('#profile-header').html(users[n].name);
+            $('#profile-title').html(users[n].title);
+            $('#user-phone').html(users[n].phone);
+            $('#user-address').html(users[n].address);
+            $('#user-email').html(users[n].email);
+            $('#user-site').html(users[n].site);
+            $('#user-birthday').html(users[n].birthday);
+        });
+    </script>
 </html>
