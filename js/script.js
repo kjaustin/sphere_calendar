@@ -35,7 +35,6 @@ $( document ).ready(function() {
 
     var newD = new Date();
     var wd = newD.getDay();
-    console.log(wd);
     var d = newD.format("MMM dd");
     var dofweek;
 
@@ -116,7 +115,7 @@ $( document ).ready(function() {
         }
 
         console.log(newStartStrings);
-        
+
         var e = Math.ceil((Number(newEndStrings) - Number(newStartStrings)) / 60);
         currentTimeValue = Number(startStrings[1]);
 
